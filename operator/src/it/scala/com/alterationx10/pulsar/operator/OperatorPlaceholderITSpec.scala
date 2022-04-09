@@ -5,7 +5,7 @@ import zio.test.*
 
 object OperatorPlaceholderITSpec extends DefaultRunnableSpec {
 
-  def spec: ZSpec[TestEnvironment, Any] = suite("Operator OperatorPlaceholderITSpec")(
+  def spec: ZSpec[TestEnvironment, Any] = suite("OperatorPlaceholderITSpec")(
     suite("tests...") {
       test("...should be implemented") {
         for {

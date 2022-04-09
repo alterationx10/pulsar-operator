@@ -29,4 +29,5 @@ object Dependencies {
     "org.apache.pulsar" % "pulsar-client-admin" % pulsarVersion
   ) ++ commonDependencies
 
+  val testFrameworks: TestFramework = new TestFramework("zio.test.sbt.ZTestFramework")
 }

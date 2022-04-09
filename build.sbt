@@ -17,7 +17,7 @@ lazy val operator = (project
     name := "pulsar.operator",
     Defaults.itSettings,
     libraryDependencies ++= Dependencies.operatorDependencies,
-    testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
+    testFrameworks += Dependencies.testFrameworks
   )
 
 lazy val pulsarAdmin = (project
@@ -27,5 +27,5 @@ lazy val pulsarAdmin = (project
     name := "pulsar.admin",
     Defaults.itSettings,
     libraryDependencies ++= Dependencies.adminClientDependencies,
-    testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
+    testFrameworks += Dependencies.testFrameworks
   )
