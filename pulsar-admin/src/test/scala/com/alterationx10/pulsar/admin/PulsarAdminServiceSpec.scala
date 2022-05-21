@@ -1,7 +1,7 @@
 package com.alterationx10.pulsar.admin
 
-import zio.*
-import zio.test.*
+import zio._
+import zio.test._
 
 object PulsarAdminServiceSpec extends DefaultRunnableSpec {
 
