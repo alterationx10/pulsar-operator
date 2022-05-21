@@ -1,6 +1,6 @@
 package com.alterationx10.pulsar.operator
-import zio.*
-import zio.test.*
+import zio._
+import zio.test._
 
 object OperatorPlaceholderSpec extends DefaultRunnableSpec {
 
