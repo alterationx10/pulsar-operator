@@ -37,4 +37,25 @@ case class PulsarAdminServiceLive(adminClient: PulsarAdmin)
       )
       .unit
 
+  override def getNamespaces(tenant: String): Task[Seq[String]] =
+    ZIO
+      .fromCompletableFuture(
+        adminClient.namespaces().getNamespacesAsync(tenant)
+      )
+      .map(_.asScala.toSeq)
+
+  override def createNamespace(name: String): Task[Unit] =
+    ZIO
+      .fromCompletableFuture(
+        adminClient.namespaces().createNamespaceAsync(name)
+      )
+      .unit
+
+  override def deleteNamespace(name: String, force: Boolean): Task[Unit] =
+    ZIO
+      .fromCompletableFuture(
+        adminClient.namespaces().deleteNamespaceAsync(name, force)
+      )
+      .unit
+
 }

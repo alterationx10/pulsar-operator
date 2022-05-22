@@ -11,4 +11,8 @@ trait PulsarAdminService {
   def updateTenantInfo(tenant: String, config: TenantInfo): Task[Unit]
   def deleteTenant(tenant: String, force: Boolean = false): Task[Unit]
 
+  def getNamespaces(tenant: String): Task[Seq[String]]
+  def createNamespace(name: String): Task[Unit]
+  def deleteNamespace(name: String, force: Boolean = false): Task[Unit]
+
 }
